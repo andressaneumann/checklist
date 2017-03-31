@@ -10,18 +10,24 @@
 			<div class="col-lg-6">
 				<div id="main" class="text-left col-lg-12 offset-3">
 					<h1>YouTube Support Checklist</h1> <br>
-					<?php 
-						include "includes/basic-information.php";
-
-						if(isset($_POST['submit_name'])){
-							include "includes/download_and_archiving.php";
-						}
-					?>
+					<form action="" method="post" onsubmit="validateForm();" name="main">
+						<div class="form-group">
+							<label>Video Title:</label>
+							<input type="text" name="videoTitle" class="form-control" id="videoTitle">
+						</div>
+						<div class="form-group">
+							<label>YouTube URL:</label>
+							<input type="url" name="videoUrl" id="url" class="form-control">
+						</div>
+						<div class="info-box-update pull-right ">
+							<input type="submit" name="submit_name" value="Submit" class="btn">
+						</div>   
+					</form>
 				</div>
 			</div>
 		</div>
 
-<!-- 
+
 		<div class="row">
 			<div id="metadata_check" class="text-left col-lg-12 offset-3">
 				<h4><b>Meta Data Check</b></h4>
@@ -137,7 +143,7 @@
 					<input type="checkbox" name="ids_dam_list"> Add IDs in Upload List
 				</form>
 			</div>
-		</div> -->
+		</div>
 
 	</div>
 	<!-- /.container -->
